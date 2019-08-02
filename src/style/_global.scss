@@ -1,0 +1,17 @@
+@import "./_mixins";
+@import "./variables";
+@import "./classes";
+
+@include font-face($qanelas-soft-light-font, "../assets/fonts/qanelas-soft-light.otf");
+@include font-face($qanelas-soft-bold-font, "../assets/fonts/qanelas-soft-bold.otf");
+@include font-face($century-gothic-font, "../assets/fonts/century-gothic.ttf");
+
+body, html {
+  font-family: $century-gothic-font;
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+}

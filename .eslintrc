@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react-redux"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-redux/recommended"
+  ],
+  "rules": {
+    "react-redux/mapDispatchToProps-returns-object": 0,
+    "react-redux/prefer-separate-component-file": 0,
+    "react/jsx-uses-vars": [2],
+    "react/prop-types": [0],
+    "no-console": "warn"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
