@@ -4,13 +4,10 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode production --open",
-    "dev": "webpack-dev-server --env.NODE_ENV=development --env.EMAILJS_SERVICE_ID=mailgun --env.EMAILJS_TEMPLATE_ID=template_NuP9GlWh --env.EMAILJS_USER_ID=user_sb3aBwx8AcLhLGmwIaKMb --mode development --host 0.0.0.0",
-    "envs": "export EMAILJS_SERVICE_ID=mailgun && export EMAILJS_TEMPLATE_ID=template_NuP9GlWh && export EMAILJS_USER_ID=user_sb3aBwx8AcLhLGmwIaKMb",
-    "build": "webpack --env.NODE_ENV=production --env.EMAILJS_SERVICE_ID=mailgun --env.EMAILJS_TEMPLATE_ID=template_NuP9GlWh --env.EMAILJS_USER_ID=user_sb3aBwx8AcLhLGmwIaKMb --mode production ./src/index.js --output ./dist/main.js",
-    "push": "git add . && git commit -m \"Saving Progress\" && git push",
-    "deploy": "npm run build && aws s3 sync dist/ s3://estetcon.com && aws s3 sync dist/ s3://www.estetcon.com"
+    "dev": "webpack-dev-server --env.NODE_ENV=development --mode development --host 0.0.0.0",
+    "build": "webpack --env.NODE_ENV=production --mode production ./src/index.js --output ./dist/main.js",
+    "push": "git add . && git commit -m \"Saving Progress\" && git push"
   },
   "keywords": [],
   "author": "Diogo Domene",
@@ -63,7 +60,7 @@
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.2.0",
-    "webpack-cli": "^2.0.12",
+    "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.1.1"
   }
 }
