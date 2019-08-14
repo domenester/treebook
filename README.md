@@ -2,5 +2,5 @@
 
 This is a simple react project initializer.
 
-###Start
+### Start
 > npm i && npm run dev
